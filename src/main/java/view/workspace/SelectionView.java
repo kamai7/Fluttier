@@ -16,6 +16,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import presenters.workspace.SelectionPresenter;
 import view.nodes.CenteredPane;
+import view.workspace.shapes.ShapeView;
 
 
 public class SelectionView extends CenteredPane implements SelectionViewContract{
@@ -74,12 +75,10 @@ public class SelectionView extends CenteredPane implements SelectionViewContract
 
     // Event handlers placeholders
     private void shapeDragged(MouseEvent event) {
-        System.out.println();
-        throw new Error();/*
         if(checkClick(event)){
             Point2D workspacePos = workspace.sceneToLocal(event.getSceneX(), event.getSceneY());
             presenter.dragged(workspacePos.getX(), workspacePos.getY());
-        }*/
+        }
     }
 
     private void topLeftDragged(MouseEvent event) {
@@ -165,6 +164,13 @@ public class SelectionView extends CenteredPane implements SelectionViewContract
     private boolean checkClick(MouseEvent e){
         return e.getButton() == MouseButton.PRIMARY;
     }
+    /* 
+    public void addShape(ShapeView<?> s){
+        
+        s.setLayoutX(s.getLayoutX());
+        s.setLayoutY(s.getLayou);
+        shapePane.getChildren().add(s);
+    }*/
 
     @Override
     public void setDimens(double w, double h) {

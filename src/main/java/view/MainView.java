@@ -19,6 +19,7 @@ public class MainView implements MainViewContract{
     private AnchorPane workspaceAnchorPane,
                        sidebarAnchorPane;
 
+    @SuppressWarnings("unused")
     private MainPresenter presenter;
     
     @FXML

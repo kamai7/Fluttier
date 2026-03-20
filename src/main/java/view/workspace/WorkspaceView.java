@@ -40,7 +40,7 @@ public class WorkspaceView implements WorkspaceViewContract{
             @Override
             public void handle(KeyEvent k) {
                 if (k.getCode() == KeyCode.SHIFT){
-                    presenter.onShiftKeyPressed();
+                    presenter.onShiftKeyReleased();
                 }
             }
         });
@@ -78,10 +78,6 @@ public class WorkspaceView implements WorkspaceViewContract{
     }
 
     // --------------------
-
-    private void keyPressed(KeyEvent e){
-        System.out.println(e);
-    }
 
     public void addShape(Node node){
         workspacePane.getChildren().add(node);
