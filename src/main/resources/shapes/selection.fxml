@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="containerStackPane" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="shape_container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.workspace.shapes.EditShapeView">
+   <children>
+      <StackPane fx:id="shapeStackPane" onMouseDragged="#shapeDragged" styleClass="shape-box" StackPane.alignment="CENTER">
+         <StackPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </StackPane.margin>
+      </StackPane>
+      <Pane onMouseDragged="#topLeftDragged" styleClass="resize-marker" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+         <cursor>
+            <Cursor fx:constant="NW_RESIZE" />
+         </cursor>
+      </Pane>
+      <Pane onMouseDragged="#topDragged" styleClass="resize-marker" StackPane.alignment="TOP_CENTER">
+         <cursor>
+            <Cursor fx:constant="S_RESIZE" />
+         </cursor>
+      </Pane>
+      <Pane onMouseDragged="#topRightDragged" styleClass="resize-marker" StackPane.alignment="TOP_RIGHT">
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+      </Pane>
+      <Pane onMouseDragged="#leftDragged" styleClass="resize-marker" StackPane.alignment="CENTER_LEFT">
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+      </Pane>
+      <Pane onMouseDragged="#rightDragged" styleClass="resize-marker" StackPane.alignment="CENTER_RIGHT">
+         <cursor>
+            <Cursor fx:constant="W_RESIZE" />
+         </cursor>
+      </Pane>
+      <Pane onMouseDragged="#bottomLeftDragged" styleClass="resize-marker" StackPane.alignment="BOTTOM_LEFT">
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+      </Pane>
+      <Pane onMouseDragged="#bottomDragged" styleClass="resize-marker" StackPane.alignment="BOTTOM_CENTER">
+         <cursor>
+            <Cursor fx:constant="S_RESIZE" />
+         </cursor>
+      </Pane>
+      <Pane onMouseDragged="#bottomRightDragged" styleClass="resize-marker" StackPane.alignment="BOTTOM_RIGHT">
+         <cursor>
+            <Cursor fx:constant="NW_RESIZE" />
+         </cursor>
+      </Pane>
+   </children>
+</StackPane>

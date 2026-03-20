@@ -1,0 +1,10 @@
+App.class
+utils\Colors.class
+model\Workspace.class
+utils\listener\Observer.class
+view\references\IconsReferences.class
+references\Icons.class
+view\navigator\Navigator.class
+view\navigator\MainNavigator.class
+utils\listener\Subject.class
+view\MainView.class

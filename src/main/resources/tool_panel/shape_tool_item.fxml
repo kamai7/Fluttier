@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="shapeToolHBox" alignment="CENTER_LEFT" fillHeight="false" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onMouseClicked" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.toolPanel.ShapeToolView">
+   <children>
+      <ImageView fx:id="iconImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="nameLabel" text="Label" />
+   </children>
+   <padding>
+      <Insets bottom="4.0" left="10.0" right="10.0" top="4.0" />
+   </padding>
+   <styleClass>
+      <String fx:value="fragment" />
+   </styleClass>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</HBox>
