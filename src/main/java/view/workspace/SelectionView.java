@@ -10,15 +10,12 @@ import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import presenters.workspace.SelectionPresenter;
 import view.nodes.CenteredPane;
-
-import Scene;
 
 
 public class SelectionView extends CenteredPane implements SelectionViewContract{

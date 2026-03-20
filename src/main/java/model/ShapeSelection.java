@@ -30,15 +30,21 @@ public class ShapeSelection implements Iterable<Shape>{
             selection.add(e);
         }
         updateInitialSelection();
-        calcDimens();
-        calcPos();
+
+        
+        Bounds b = calcBounds();
+        calcDimens(b);
+        calcPos(b);
     }
 
     public void add(Collection<Shape> s){
         selection.addAll(s);
         updateInitialSelection();
-        calcDimens();
-        calcPos();
+
+        
+        Bounds b = calcBounds();
+        calcDimens(b);
+        calcPos(b);
     }
 
     public boolean contains(Object o){
@@ -48,15 +54,20 @@ public class ShapeSelection implements Iterable<Shape>{
     public void remove(Shape o){
         selection.remove(o);
         updateInitialSelection();
-        calcDimens();
-        calcPos();
+
+        Bounds b = calcBounds();
+        calcDimens(b);
+        calcPos(b);
     }
 
     public void clear(){
         selection.clear();
         updateInitialSelection();
-        calcDimens();
-        calcPos();
+
+        
+        Bounds b = calcBounds();
+        calcDimens(b);
+        calcPos(b);
     }
 
     public boolean isEmpty(){
@@ -91,7 +102,10 @@ public class ShapeSelection implements Iterable<Shape>{
         for(Shape s: selection){
             s.getPos().add(offset);
         }
-        calcPos();
+
+        
+        Bounds b = calcBounds();
+        calcPos(b);
     }
 
     public void resize(ReadOnlyVect factor){
@@ -102,7 +116,10 @@ public class ShapeSelection implements Iterable<Shape>{
             selection.get(i).setPos(posFromCenter.add(pos));
             selection.get(i).setDimens(initialShapeSelection.get(i).getDimens().getMult(factor).abs());
         }
-        calcDimens();
+
+        
+        Bounds b = calcBounds();
+        calcDimens(b);
     }
 
     public void apply(){
@@ -111,14 +128,12 @@ public class ShapeSelection implements Iterable<Shape>{
 
     // private class operations
 
-    private void calcDimens(){
-        Bounds b = calcBounds();
+    private void calcDimens(Bounds b){
         dimens.setX(b.right - b.left);
         dimens.setY(b.bottom - b.top);
     }
 
-    private void calcPos(){
-        Bounds b = calcBounds();
+    private void calcPos(Bounds b){
         pos.setX((b.left + b.right)/2);
         pos.setY((b.top + b.bottom)/2);
     }
